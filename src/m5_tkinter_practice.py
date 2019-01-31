@@ -22,7 +22,8 @@ def main():
     # DONE: 3. After reading and understanding the m2e module,
     #   ** put a Frame on the window. **
     # -------------------------------------------------------------------------
-    my_frame = ttk.Frame(window, relief="groove", padding=(20,20))
+    my_frame = ttk.Frame(window, relief="sunken", padding=(20,20), borderwidth = 3)
+
     my_frame.grid()
     # -------------------------------------------------------------------------
     # DONE: 4. After reading and understanding the m2e module,
@@ -37,16 +38,29 @@ def main():
     # -------------------------------------------------------------------------
     my_button['command'] = lambda : print("Hello")
     # -------------------------------------------------------------------------
-    # TODO: 6. After reading and understanding the m4e module,
+    # DONE: 6. After reading and understanding the m4e module,
     #   -- Put an Entry box on the Frame.
     #   -- Put a second Button on the Frame.
     #   -- Make this new Button, when pressed, print "Hello"
     #        on the Console if the current string in the Entry box
     #        is the string 'ok', but print "Goodbye" otherwise.
     # -------------------------------------------------------------------------
+    def print_contents(contents):
+        stuff = contents.get()
+        if stuff == 'ok':
+            print("Hello")
+        else:
+            print("Goodbye")
+
+    my_entry = ttk.Entry(my_frame)
+    my_entry.grid()
+
+    get_button = ttk.Button(my_frame, text="get entry")
+    get_button['command'] = lambda: print_contents(my_entry)
+    get_button.grid()
 
     # -------------------------------------------------------------------------
-    # TODO: 7.
+    # DONE: 7.
     #    -- Put a second Entry on the Frame.
     #    -- Put a third Button on the frame.
     #    -- Make this new Button respond to a button-press as follows:
@@ -68,10 +82,26 @@ def main():
     #      s = entry_box.get()
     #      n = int(s)
     ####################################################################
+    def print_N_times(entry1, entry2):
+        stri = entry1.get()
+        integer = int(entry2.get())
+
+        for k in range(integer):
+            print(stri)
+
+
+    sec_entry = ttk.Entry(my_frame)
+    sec_entry.grid()
+
+    sec_button = ttk.Button(my_frame, text="Print string N times")
+    sec_button['command'] = lambda: print_N_times(my_entry, sec_entry)
+    sec_button.grid()
 
     # -------------------------------------------------------------------------
     # TODO: 8. As time permits, do other interesting GUI things!
     # -------------------------------------------------------------------------
+    radio_b = ttk.Radiobutton(my_frame, text="hello")
+    radio_b.grid()
     window.mainloop()
 
 
