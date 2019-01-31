@@ -13,7 +13,7 @@ from tkinter import ttk
 def main():
     """ Constructs a GUI that will be used MUCH later to control EV3. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Follow along with the video to make a remote control GUI
+    # DONE: 2. Follow along with the video to make a remote control GUI
     # For every grid() method call you will add a row and a column argument
     # -------------------------------------------------------------------------
 
