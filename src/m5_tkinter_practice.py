@@ -19,24 +19,23 @@ def main():
     window = tkinter.Tk()
     #window.mainloop()
     # -------------------------------------------------------------------------
-    # TODO: 3. After reading and understanding the m2e module,
+    # DONE: 3. After reading and understanding the m2e module,
     #   ** put a Frame on the window. **
     # -------------------------------------------------------------------------
-    my_frame = ttk.Frame(window, relief="raised", padding=10)
+    my_frame = ttk.Frame(window, relief="groove", padding=(20,20))
     my_frame.grid()
     # -------------------------------------------------------------------------
-    # TODO: 4. After reading and understanding the m2e module,
+    # DONE: 4. After reading and understanding the m2e module,
     #   ** put a Button on the Frame. **
     # -------------------------------------------------------------------------
     my_button = ttk.Button(my_frame, text="Click Me")
     my_button.grid()
-    window.mainloop()
     # -------------------------------------------------------------------------
-    # TODO: 5. After reading and understanding the m3e module,
+    # DONE: 5. After reading and understanding the m3e module,
     #   ** make your Button respond to a button-press **
     #   ** by printing   "Hello"  on the Console.     **
     # -------------------------------------------------------------------------
-
+    my_button['command'] = lambda : print("Hello")
     # -------------------------------------------------------------------------
     # TODO: 6. After reading and understanding the m4e module,
     #   -- Put an Entry box on the Frame.
@@ -73,6 +72,8 @@ def main():
     # -------------------------------------------------------------------------
     # TODO: 8. As time permits, do other interesting GUI things!
     # -------------------------------------------------------------------------
+    window.mainloop()
+
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

@@ -8,8 +8,8 @@ Example showing for tkinter and ttk:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Joseph Conrad.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import tkinter
 from tkinter import ttk
@@ -24,9 +24,8 @@ def main():
 
     print_stuff_button = ttk.Button(frame1, text='Print stuff')
     print_stuff_button['command'] = (lambda:
-                                     do_stuff())
+                                    do_stuff())
     print_stuff_button.grid()
-
     root.mainloop()
 
 
