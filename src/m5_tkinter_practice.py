@@ -100,7 +100,7 @@ def main():
     sec_button.grid()
 
     # -------------------------------------------------------------------------
-    # TODO: 8. As time permits, do other interesting GUI things!
+    # DONE: 8. As time permits, do other interesting GUI things!
     # -------------------------------------------------------------------------
     radio_b = ttk.Radiobutton(my_frame, text="hello")
     radio_b.grid()
