@@ -89,6 +89,8 @@ def main():
         for k in range(integer):
             print(stri)
 
+        entry2.delete(0,len(entry2.get()))
+        entry1.delete(0, len(entry1.get()))
 
     sec_entry = ttk.Entry(my_frame)
     sec_entry.grid()
